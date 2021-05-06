@@ -20,3 +20,7 @@ header{
 .heading{
     display: inline-block;
 }
+#scribblerTitle{
+    font-family: 'Montez', cursive;
+    color: blue;
+}

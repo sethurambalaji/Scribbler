@@ -1,0 +1,21 @@
+
+#bodyContent{
+    background-image: url("../images/background.jpg");
+    background-size: cover;
+}
+.SignBtns{
+    display: inline-block;
+    position: absolute;
+    right: 2%;
+    margin: 1.5%;
+}
+header{
+    display: inline-block;
+}
+#SignUp,#SignIn{
+    background-color: blue;
+    color: white;
+}
+.heading{
+    display: inline-block;
+}

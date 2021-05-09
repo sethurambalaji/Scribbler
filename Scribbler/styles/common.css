@@ -27,6 +27,12 @@ input{
     border-radius: .25rem;
     transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
 }
+#notAMember{
+    text-align: center;
+    font-weight: bold;
+    margin-top: 10px;
+    margin-bottom: 0;
+}
 .modal-body{
     margin-top: 0;
 }
@@ -53,7 +59,7 @@ header{
 #subHeading{
     font-family: 'Ubuntu Mono', monospace;
 }
-#signUpModal{
+#signUpModal,#signInModal{
     display: none;
     background-color: rgba(0,0,0,0.4);
 }

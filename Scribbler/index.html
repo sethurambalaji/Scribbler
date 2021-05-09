@@ -24,7 +24,7 @@
     </div>
     <div class="SignBtns">
         <button class="btn btn-primary" id="SignUpBtn" onclick=signUp() type="button">Sign Up</button>
-        <button class="btn btn-primary" id="SignInBtn" type="button">Sign In</button>
+        <button class="btn btn-primary" id="SignInBtn" onclick="signIn()" type="button">Sign In</button>
     </div>
     <div class="signInModal"></div>
 </header>
@@ -60,6 +60,39 @@
                         <button class="btn btn-success" id="signUpbutton" type="submit">Sign Up</button>
                     </div>
                 </form>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<!-- The Sign In Modal -->
+<div class="modal" class="signInModal" id="signInModal" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Welcome Back!</h5>
+                <button aria-label="Close" onclick="closeSignInModal()" class="btn-close" type="button"></button>
+            </div>
+            <div class="modal-body">
+
+                <form class="row g-3">
+
+                    <div class="log-form">
+                        <label  for="userName" class="form-label">Username</label>
+                        <input id="userNameSignIn"  placeholder="Enter your username" type="text"required>
+                    </div>
+                    <div class="log-form">
+                        <label for="inputPassword1" class="form-label">Password</label>
+                        <input id="inputPassword1SignIn"  placeholder="Enter your password" type="password" required>
+                    </div>
+
+                    <div class="d-grid gap-2">
+                        <button class="btn btn-success" id="signInbutton" type="submit">Sign In</button>
+                    </div>
+                </form>
+
+                <p id="notAMember">Not a member?<a href="#" onclick=notAmember()>Register</a></p>
             </div>
 
         </div>

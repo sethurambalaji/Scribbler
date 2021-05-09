@@ -1,4 +1,3 @@
-
 function signUp(){
     var signUpModal = document.getElementById("signUpModal");
     signUpModal.style.display = "block";

@@ -1,3 +1,40 @@
 body{
     background-color: #ffeedd;
 }
+.postsList{
+    display: flex;
+    flex-direction: row;
+    block-size: 30%;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.postCard{
+    display: flex;
+    flex-direction: row;
+    width: 40%;
+    margin-bottom: 3%;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.author{
+    flex-wrap: wrap;
+    flex-direction: row;
+    background-color: white;
+    display: inline-block;
+    block-size: fit-content;
+    line-height: 3;
+    width: fit-content;
+    background: space;
+    align-self: center;
+    text-align: center;
+    padding-left: 2%;
+    padding-right: 2%;
+}
+.card-content{
+    display: inline-block;
+    background-color: whitesmoke;
+    border-radius: 0 20px 20px 0;
+    text-align: justify;
+    padding: 1%;
+}

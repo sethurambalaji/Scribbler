@@ -1,8 +1,34 @@
-
-#bodyContent{
+body{
     background-image: url("../images/background.jpg");
     background-repeat: no-repeat;
     background-size: cover;
+    background-attachment: fixed;
+    margin:0;
+    overflow: hidden;
+}
+label{
+    font-weight: bold;
+}
+input{
+    background-color: lightgrey;
+    margin-bottom:8px;
+    display: block;
+    width: 100%;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border-radius: .25rem;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+.modal-body{
+    margin-top: 0;
 }
 .SignBtns{
     display: inline-block;
@@ -26,4 +52,12 @@ header{
   }
 #subHeading{
     font-family: 'Ubuntu Mono', monospace;
+}
+#signUpModal{
+    display: none;
+    background-color: rgba(0,0,0,0.4);
+}
+#signUpbutton{margin-top: 20px;}
+.modal-content{
+    max-width: 400px;
 }

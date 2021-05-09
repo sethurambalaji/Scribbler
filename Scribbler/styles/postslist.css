@@ -48,3 +48,12 @@ body{
     -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
 }
+.trash{
+    position: absolute;
+    top: 8px;
+    right: 16px;
+    font-size: 18px;
+}
+.post-title{
+    width: 90%;
+}

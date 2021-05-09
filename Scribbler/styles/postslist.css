@@ -54,6 +54,18 @@ body{
     right: 16px;
     font-size: 18px;
 }
+.trash:hover{
+    cursor: pointer;
+}
 .post-title{
     width: 90%;
+}
+#confirmDeleteModal{
+    display: none;
+    background-color: rgba(0,0,0,0.4);
+}
+.confirmDeleteButtons{
+    margin-top: 0;
+    display: flex;
+    justify-content: space-between;
 }

@@ -1,0 +1,46 @@
+.postBtns{
+    position: relative;
+    display: grid;
+    margin: auto;
+    justify-content: center;
+    grid-auto-flow: column;
+    padding-top: 20%;
+
+}
+
+#allPostsBtn{
+    margin-right: 20px;
+}
+#createPostModal {
+    display: none;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+.createPost>input,textarea{
+    background-color: whitesmoke;
+    margin-bottom:8px;
+    display: block;
+    width: 100%;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border-radius: .25rem;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+textarea{
+    height: 300px;
+}
+#createBtn{
+    display: inline-block;
+    margin-left: 44%;
+    margin-right: 50%;
+    width: 10%;
+    font-weight: bold;
+}
+

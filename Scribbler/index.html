@@ -9,7 +9,6 @@
           integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" rel="stylesheet">
     <link href="styles/common.css" rel="stylesheet">
     <link href="styles/index.css" rel="stylesheet">
-    <script src="scripts/common.js"></script>
     <title>
         Scribbler
     </title>
@@ -32,7 +31,7 @@
 <!-- The Sign Up Modal -->
 <div class="modal" class="signUpModal" id="signUpModal" tabindex="-1">
     <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
+        <div class="modal-content logging">
             <div class="modal-header">
                 <h5 class="modal-title">Get Started</h5>
                 <button aria-label="Close" onclick="closeSignUpModal()" class="btn-close" type="button"></button>
@@ -69,7 +68,7 @@
 <!-- The Sign In Modal -->
 <div class="modal" class="signInModal" id="signInModal" tabindex="-1">
     <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
+        <div class="modal-content logging">
             <div class="modal-header">
                 <h5 class="modal-title">Welcome Back!</h5>
                 <button aria-label="Close" onclick="closeSignInModal()" class="btn-close" type="button"></button>
@@ -92,7 +91,7 @@
                     </div>
                 </form>
 
-                <p id="notAMember">Not a member?<a href="#" onclick=notAmember()>Register</a></p>
+                <p id="notAMember">Not a member?<a href="#" onclick=notAMember()>Register</a></p>
             </div>
 
         </div>
@@ -103,9 +102,40 @@
     <a href="html/bloglist.html">
     <button class="btn btn-warning btn-lg" id="allPostsBtn" type="button">All Posts</button>
     </a>
-    <button class="btn btn-warning btn-lg" type="button">Create Post</button>
+    <button class="btn btn-warning btn-lg" onclick="createPost()" type="button">Create Post</button>
+</div>
+
+
+<div class="modal" id="createPostModal" tabindex="-1">
+    <div class="modal-dialog modal-xl" id="createPostModalContent">
+        <div class="modal-content createPostModalContent">
+            <div class="modal-header">
+                <h5 class="modal-title">Pen Your Post</h5>
+                <button aria-label="Close" onclick="closeCreatePostModal()" class="btn-close" type="button"></button>
+            </div>
+            <div class="modal-body">
+
+                <form class="row g-3">
+
+                    <div class="log-form createPost">
+                        <label  for="postTitle" class="form-label">Title</label>
+                        <input id="postTitle"  placeholder="Enter title of your post" type="text"required>
+                    </div>
+                    <div class="log-form createPost">
+                        <label for="postContent" class="form-label">Contents</label>
+                        <textarea id="postContent" placeholder="Enter the contents of your post"></textarea>
+                    </div>
+
+                    <div>
+                        <button class="btn btn-success" id="createBtn" type="submit">Create</button>
+                    </div>
+                </form>
+
+            </div>
+
+        </div>
+    </div>
 </div>
 </body>
-
-
+<script src="scripts/common.js"></script>
 </html>

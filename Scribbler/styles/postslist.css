@@ -33,13 +33,17 @@ body{
     text-align: center;
     padding-left: 2%;
     padding-right: 2%;
+    font-weight: bolder;
+    line-height: 1;
 }
 .card-content{
     display: inline-block;
     background-color: whitesmoke;
     border-radius: 0 20px 20px 0;
     text-align: justify;
-    padding: 1%;
+    padding: 1% 6% 1% 2%;
+    line-height: 1;
+
 }
 .postBodyContent{
     overflow: hidden;
@@ -47,6 +51,7 @@ body{
     display: -webkit-box;
     -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
+    font-weight: 600;
 }
 .trash{
     position: absolute;
@@ -59,6 +64,9 @@ body{
 }
 .post-title{
     width: 90%;
+    color: darkgrey;
+    font-size: large;
+    font-weight: 500;
 }
 #confirmDeleteModal{
     display: none;

@@ -20,7 +20,6 @@ when edit clicked
 when save clisked
     removing attribute contenteditable
     save button changed to edit
- *
  */
 function onEdit() {
   var editButton;

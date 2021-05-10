@@ -50,15 +50,22 @@ function onEdit() {
       Mouse event listener added to ensure user clicks save button to save edit
       else sets last edited text
        */
+      var editMouseClicks = 0 ;
       document.body.addEventListener('click', function (event) {
-          if (editButton.contains(event.target)) {
-              postTitleText = headingBlock.innerText;
-              postContenttext = postContent.innerText ;
+          if(headingBlock.contains(event.target)||postContent.contains(event.target)){
+
           }
           else{
-              headingBlock.innerText = postTitleText;
-              postContent.innerText = postContenttext;
+              if (editButton.contains(event.target)) {
+                  postTitleText = headingBlock.innerText;
+                  postContenttext = postContent.innerText ;
+              }
+              else{
+                  headingBlock.innerText = postTitleText;
+                  postContent.innerText = postContenttext;
+              }
           }
+
       });
 
   }

@@ -23,7 +23,7 @@ function onEdit() {
       postContent.removeAttribute('contenteditable');
       headingBlock.setAttribute('class','edit-heading');
       postContent.setAttribute('class','edit-contentText');
-      editButton.innerHTML = 'Save<i class="fa fa-edit" style="padding-left: 4px;"></i></button>';
+      editButton.innerHTML = 'Edit<i class="fa fa-edit" style="padding-left: 4px;"></i></button>';
   }
 }
 

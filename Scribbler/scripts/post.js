@@ -47,10 +47,11 @@ function onEdit() {
       editButton.innerHTML = 'Edit<i class="fa fa-edit" style="padding-left: 4px;"></i></button>';
 
       /*
-      Mouse event listener added to ensure user clicks save button to save edit
+      Mouse event listener added to ensure whether user clicks save button to save edited text
       else sets last edited text
+      outer if else part track whether mouse click is on editing text or elsewhere
+      inner else if  -> changes content to last saved one
        */
-      var editMouseClicks = 0 ;
       document.body.addEventListener('click', function (event) {
           if(headingBlock.contains(event.target)||postContent.contains(event.target)){
 

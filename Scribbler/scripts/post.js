@@ -27,9 +27,7 @@ function onEdit() {
   editButton = document.getElementById('edit-button');
   var headingBlock = document.getElementById('edit-heading');
   var postContent = document.getElementById('edit-contentText');
-  if(editButton.innerText==='Edit')
-  {
-      var postContenttext = postContent.innerText;
+  if(editButton.innerText==='Edit'){
       headingBlock.setAttribute('contenteditable','true');
       postContent.setAttribute('contenteditable','true');
       headingBlock.setAttribute('class','edit-heading editable');
@@ -37,9 +35,7 @@ function onEdit() {
       editButton.innerHTML = 'Save<i class="fa fa-save" style="padding-left: 4px;"></i></button>';
   }
   else{
-      editButton = document.getElementById('edit-button');
-      var headingBlock = document.getElementById('edit-heading');
-      var postContent = document.getElementById('edit-contentText');
+      editButton.innerText = 'Edit' ;
       headingBlock.removeAttribute('contenteditable');
       postContent.removeAttribute('contenteditable');
       headingBlock.setAttribute('class','edit-heading');
@@ -47,7 +43,6 @@ function onEdit() {
       editButton.innerHTML = 'Edit<i class="fa fa-edit" style="padding-left: 4px;"></i></button>';
   }
 }
-
 
 
 var numberOfClicks=0;//tracking number of clicks on like button

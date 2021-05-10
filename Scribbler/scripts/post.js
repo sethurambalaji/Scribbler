@@ -1,3 +1,5 @@
+var postTitleText=""; //default title text saved for edit feature
+var postContenttext =""; //default body content saved for edit feature
 /*
 function triggers when page loads
 Data fetched from session storage to be added as inner text of
@@ -9,6 +11,8 @@ function dataLoading() {
     document.getElementById('author').innerText = sessionStorage.getItem('authorText');
     var bodyContent = sessionStorage.getItem('bodytext').replaceAll('\n','');
     document.getElementById('edit-contentText').innerText = bodyContent;
+    postTitleText = sessionStorage.getItem('titletext');
+    postContenttext = bodyContent ;
 }
 
 /*
@@ -20,6 +24,7 @@ when edit clicked
 when save clisked
     removing attribute contenteditable
     save button changed to edit
+ *
  */
 function onEdit() {
   var editButton;
@@ -40,15 +45,30 @@ function onEdit() {
       headingBlock.setAttribute('class','edit-heading');
       postContent.setAttribute('class','edit-contentText');
       editButton.innerHTML = 'Edit<i class="fa fa-edit" style="padding-left: 4px;"></i></button>';
+
+      /*
+      Mouse event listener added to ensure user clicks save button to save edit
+      else sets last edited text
+       */
+      document.body.addEventListener('click', function (event) {
+          if (editButton.contains(event.target)) {
+              postTitleText = headingBlock.innerText;
+              postContenttext = postContent.innerText ;
+          }
+          else{
+              headingBlock.innerText = postTitleText;
+              postContent.innerText = postContenttext;
+          }
+      });
+
   }
 }
 
 
 var numberOfClicks=0;//tracking number of clicks on like button
 /*like function
- varies  for 0click , 1 click,2+ click
+ like content varies  for 0click , 1 click,2+ click
  */
-
 function postLiked(){
     document.getElementById("likeBlog").innerHTML = "<i class='fa fa-thumbs-up'></i> Liked!";
     numberOfClicks += 1;

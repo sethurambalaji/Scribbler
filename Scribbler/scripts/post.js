@@ -4,11 +4,15 @@ Data fetched from session storage to be added as inner text of
 Post container html skeleton tags
 title,authorname and body content are fetched
 * */
+var postTitleText="";
+var postContenttext ="";
 function dataLoading() {
     document.getElementById('edit-heading').innerText = sessionStorage.getItem('titletext');
     document.getElementById('author').innerText = sessionStorage.getItem('authorText');
     var bodyContent = sessionStorage.getItem('bodytext').replaceAll('\n','');
     document.getElementById('edit-contentText').innerText = bodyContent;
+    postTitleText = sessionStorage.getItem('titletext');
+    postContenttext = bodyContent ;
 }
 
 /*
@@ -41,6 +45,17 @@ function onEdit() {
       headingBlock.setAttribute('class','edit-heading');
       postContent.setAttribute('class','edit-contentText');
       editButton.innerHTML = 'Edit<i class="fa fa-edit" style="padding-left: 4px;"></i></button>';
+      document.body.addEventListener('click', function (event) {
+          if (editButton.contains(event.target)) {
+              postTitleText = headingBlock.innerText;
+              postContenttext = postContent.innerText ;
+          }
+          else{
+              headingBlock.innerText = postTitleText;
+              postContent.innerText = postContenttext;
+          }
+      });
+
   }
 }
 

@@ -37,21 +37,12 @@ function onEdit() {
       headingBlock.setAttribute('class','edit-heading editable');
       postContent.setAttribute('class','edit-contentText editable');
       editButton.innerHTML = 'Save<i class="fa fa-save" style="padding-left: 4px;"></i></button>';
-  }
-  else{
-      editButton.innerText = 'Edit' ;
-      headingBlock.removeAttribute('contenteditable');
-      postContent.removeAttribute('contenteditable');
-      headingBlock.setAttribute('class','edit-heading');
-      postContent.setAttribute('class','edit-contentText');
-      editButton.innerHTML = 'Edit<i class="fa fa-edit" style="padding-left: 4px;"></i></button>';
-
       /*
-      Mouse event listener added to ensure whether user clicks save button to save edited text
-      else sets last edited text
-      outer if else part track whether mouse click is on editing text or elsewhere
-      inner else if  -> changes content to last saved one
-       */
+     Mouse event listener added to ensure whether user clicks save button to save edited text
+     else sets last edited text
+     outer if else part track whether mouse click is on editing text or elsewhere
+     inner else if  -> changes content to last saved one
+      */
       document.body.addEventListener('click', function (event) {
           if(headingBlock.contains(event.target)||postContent.contains(event.target)){
 
@@ -64,10 +55,21 @@ function onEdit() {
               else{
                   headingBlock.innerText = postTitleText;
                   postContent.innerText = postContenttext;
+                  onEdit();
               }
           }
 
       });
+
+  }
+  else{
+      editButton.innerText = 'Edit' ;
+      headingBlock.removeAttribute('contenteditable');
+      postContent.removeAttribute('contenteditable');
+      headingBlock.setAttribute('class','edit-heading');
+      postContent.setAttribute('class','edit-contentText');
+      editButton.innerHTML = 'Edit<i class="fa fa-edit" style="padding-left: 4px;"></i></button>';
+
 
   }
 }

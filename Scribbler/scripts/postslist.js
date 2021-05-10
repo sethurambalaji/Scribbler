@@ -1,6 +1,3 @@
-var imported = document.createElement('script');
-imported.src = './scommon.js';
-document.head.appendChild(imported);
 
 var posts = document.getElementsByClassName("postCard");
 for(let  i=0; i<posts.length; i++){

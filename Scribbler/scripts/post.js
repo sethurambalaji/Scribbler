@@ -1,11 +1,11 @@
+var postTitleText=""; //default title text saved for edit feature
+var postContenttext =""; //default body content saved for edit feature
 /*
 function triggers when page loads
 Data fetched from session storage to be added as inner text of
 Post container html skeleton tags
 title,authorname and body content are fetched
 * */
-var postTitleText="";
-var postContenttext ="";
 function dataLoading() {
     document.getElementById('edit-heading').innerText = sessionStorage.getItem('titletext');
     document.getElementById('author').innerText = sessionStorage.getItem('authorText');
@@ -45,6 +45,11 @@ function onEdit() {
       headingBlock.setAttribute('class','edit-heading');
       postContent.setAttribute('class','edit-contentText');
       editButton.innerHTML = 'Edit<i class="fa fa-edit" style="padding-left: 4px;"></i></button>';
+
+      /*
+      Mouse event listener added to ensure user clicks save button to save edit
+      else sets last edited text
+       */
       document.body.addEventListener('click', function (event) {
           if (editButton.contains(event.target)) {
               postTitleText = headingBlock.innerText;

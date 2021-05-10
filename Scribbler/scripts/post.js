@@ -1,3 +1,9 @@
+/*
+function triggers when page loads
+Data fetched from session storage to be added as inner text of
+Post container html skeleton tags
+title,authorname and body content are fetched
+* */
 function dataLoading() {
     document.getElementById('edit-heading').innerText = sessionStorage.getItem('titletext');
     document.getElementById('author').innerText = sessionStorage.getItem('authorText');
@@ -5,6 +11,16 @@ function dataLoading() {
     document.getElementById('edit-contentText').innerText = bodyContent;
 }
 
+/*
+Edit Function
+when edit clicked
+    setting attribute contenteditable=true
+    edit buttons changes to save
+    contents get edited
+when save clisked
+    removing attribute contenteditable
+    save button changed to edit
+ */
 function onEdit() {
   var editButton;
   editButton = document.getElementById('edit-button');
@@ -27,7 +43,12 @@ function onEdit() {
   }
 }
 
-var numberOfClicks=0;
+
+var numberOfClicks=0;//tracking number of clicks on like button
+/*like function
+ varies  for 0click , 1 click,2+ click
+ */
+
 function postLiked(){
     document.getElementById("likeBlog").innerHTML = "<i class='fa fa-thumbs-up'></i> Liked!";
     numberOfClicks += 1;
@@ -41,16 +62,17 @@ function postLiked(){
     }
 }
 
+/*
+comment function
+ */
 function addComments(id){
     if(id.value!==""){
         var addEventName = id.value +'<br>';
-        var a = document.getElementById('userComments');
-        var innerHTMLContent = document.getElementById('addEventNames').innerHTML ;
-        document.getElementById('addEventNames').innerHTML = '<p>'+addEventName+'</p>'+innerHTMLContent;
-        a.value=a.defaultValue;
+        var comments = document.getElementById('userComments');
+        var innerHTMLContent = document.getElementById('addComments').innerHTML ;
+        document.getElementById('addComments').innerHTML = '<p>'+addEventName+'</p>'+innerHTMLContent;
+        comments.value = comments.defaultValue;
     }
-
-
 }
 
 

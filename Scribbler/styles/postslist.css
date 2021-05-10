@@ -1,6 +1,7 @@
 body{
     background-color: #ffeedd;
 }
+
 .postsList{
     display: flex;
     flex-direction: row;
@@ -17,16 +18,17 @@ body{
     border-radius: 20px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
+
 .postCard:hover{
     box-shadow: 10px 10px 5px grey;
 }
+
 .author{
     flex-wrap: wrap;
     flex-direction: row;
     background-color: white;
     display: inline-block;
     block-size: fit-content;
-    line-height: 3;
     width: fit-content;
     background: space;
     align-self: center;
@@ -43,8 +45,8 @@ body{
     text-align: justify;
     padding: 1% 6% 1% 2%;
     line-height: 1;
-
 }
+
 .postBodyContent{
     overflow: hidden;
     text-overflow: ellipsis;
@@ -53,37 +55,41 @@ body{
     -webkit-box-orient: vertical;
     font-weight: 600;
 }
+
 .trash{
     position: absolute;
     top: 8px;
     right: 16px;
     font-size: 18px;
 }
+
 .trash:hover{
     cursor: pointer;
 }
+
 .post-title{
     width: 90%;
     color: darkgrey;
     font-size: large;
     font-weight: 500;
 }
+
 #confirmDeleteModal{
     display: none;
     background-color: rgba(0,0,0,0.4);
 }
+
 .confirmDeleteButtons{
     margin-top: 0;
     display: flex;
     justify-content: space-between;
 }
-.readMore{
 
+.readMore{
     color: black;
     cursor: pointer;
     position: absolute;
     bottom: 8px;
     right: 16px;
     font-size: 18px;
-
 }

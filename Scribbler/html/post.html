@@ -17,54 +17,54 @@
     </title>
 </head>
 <body onload="dataLoading()">
-<header>
-<div class="heading">
-    <h1 id="scribblerTitle">ScriBBler</h1>
-    <p id="subHeading">Explore, Imagine, Create</p>
-</div>
-<div class="SignBtns">
-    <button class="btn btn-primary" id="SignUpBtn" onclick=signUp() type="button">Sign Up</button>
-    <button class="btn btn-primary" id="SignInBtn" onclick="signIn()" type="button">Sign In</button>
-</div>
-<div class="signInModal"></div>
-</header>
+    <header>
+        <div class="heading">
+            <h1 id="scribblerTitle">ScriBBler</h1>
+            <p id="subHeading">Explore, Imagine, Create</p>
+        </div>
+        <div class="SignBtns">
+            <button class="btn btn-primary" id="SignUpBtn" onclick=signUp() type="button">Sign Up</button>
+            <button class="btn btn-primary" id="SignInBtn" onclick="signIn()" type="button">Sign In</button>
+        </div>
+        <div class="signInModal"></div>
+    </header>
 
-<!-- The Sign Up Modal -->
-<div class="modal" class="signUpModal" id="signUpModal" tabindex="-1">
-    <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content logging">
-            <div class="modal-header">
-                <h5 class="modal-title">Get Started</h5>
-                <button aria-label="Close" class="btn-close" onclick="closeSignUpModal()" type="button"></button>
+    <!-- The Sign Up Modal -->
+    <div class="modal" class="signUpModal" id="signUpModal" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content logging">
+                <div class="modal-header">
+                    <h5 class="modal-title">Get Started</h5>
+                    <button aria-label="Close" class="btn-close" onclick="closeSignUpModal()" type="button"></button>
+                </div>
+                <div class="modal-body">
+
+                    <form class="row g-3">
+                        <div class="log-form">
+                            <label class="form-label" for="name">Name</label>
+                            <input id="name" placeholder="Enter your name" required type="text">
+                        </div>
+                        <div class="log-form">
+                            <label class="form-label" for="userName">Username</label>
+                            <input id="userName" placeholder="Enter your username" required type="text">
+                        </div>
+                        <div class="log-form">
+                            <label class="form-label" for="inputPassword1">Password</label>
+                            <input id="inputPassword1" placeholder="Enter your password" required type="password">
+                        </div>
+                        <div class="log-form">
+                            <label class="form-label" for="inputPassword2">Confirm Password</label>
+                            <input id="inputPassword2" placeholder="Re-enter your password" required type="password">
+                        </div>
+                        <div class="d-grid gap-2">
+                            <button class="btn btn-success" id="signUpbutton" type="submit">Sign Up</button>
+                        </div>
+                    </form>
+                </div>
             </div>
-            <div class="modal-body">
-
-                <form class="row g-3">
-                    <div class="log-form">
-                        <label class="form-label" for="name">Name</label>
-                        <input id="name" placeholder="Enter your name" required type="text">
-                    </div>
-                    <div class="log-form">
-                        <label class="form-label" for="userName">Username</label>
-                        <input id="userName" placeholder="Enter your username" required type="text">
-                    </div>
-                    <div class="log-form">
-                        <label class="form-label" for="inputPassword1">Password</label>
-                        <input id="inputPassword1" placeholder="Enter your password" required type="password">
-                    </div>
-                    <div class="log-form">
-                        <label class="form-label" for="inputPassword2">Confirm Password</label>
-                        <input id="inputPassword2" placeholder="Re-enter your password" required type="password">
-                    </div>
-                    <div class="d-grid gap-2">
-                        <button class="btn btn-success" id="signUpbutton" type="submit">Sign Up</button>
-                    </div>
-                </form>
-            </div>
-
         </div>
     </div>
-</div>
+
 
 <!-- The Sign In Modal -->
 <div class="modal" class="signInModal" id="signInModal" tabindex="-1">
@@ -98,44 +98,46 @@
         </div>
     </div>
 </div>
+<!--End of header,SignUp Modal,Sign In Modal-->
 
-<div class="post-container">
-    <div class="heading-content">
-        <h1 id="edit-heading"></h1>
-    </div>
-    <div class="authorBlock">
-        <div class="author-name">
-            <p id="author">
+    <!--Post Container Skeleton tags, data to be fetched from postslist.html-->
+    <div class="post-container">
+        <!--Post Heading-->
+        <div class="heading-content">
+            <h1 id="edit-heading"></h1>
         </div>
-        <div>
-            <button id="edit-button" type="button" class="btn btn-danger" onclick="onEdit()">Edit<i
+
+        <!--Author Name-->
+        <div class="authorBlock">
+            <div class="author-name">
+                <p id="author">
+            </div>
+            <!--Edit/save Button-->
+            <div>
+                <button id="edit-button" type="button" class="btn btn-danger" onclick="onEdit()">Edit<i
                     class="fa fa-edit" style="padding-left: 5px;"></i></button>
+            </div>
         </div>
+
+        <!--Content-->
+        <div class="post-content">
+            <p id="edit-contentText"></p>
+        </div>
+
+        <!--Like Feature-->
+        <div class="likeBlogButton">
+            <button  id= "likeBlog" onclick="postLiked()"><i class="fa fa-thumbs-up"> Like</i></button>
+            <span id="likeCount">Be the first one to like this!</span>
+        </div>
+
+        <!--Comment feature-->
+        <input type="textarea" placeholder="Leave a comment..." id="userComments" value="" required><br>
+        <button id="addList" class="btn btn-danger" onclick="addComments(userComments)">Comment</button>
+        <p style="font-weight: bolder;margin: 1%;">All Comments</p>
+        <div id="addComments"></div>
     </div>
-
-
-    <div class="post-content">
-        <p id="edit-contentText"></p>
-    </div>
-
-    <div class="likeBlogButton">
-        <button  id= "likeBlog" onclick="postLiked()"><i class="fa fa-thumbs-up"> Like</i></button>
-        <span id="likeCount">Be the first one to like this!</span>
-    </div>
-
-    <input type="textarea" placeholder="Leave a comment..." id="userComments" value="" required>
-    <br>
-    <button id="addList" class="btn btn-danger" onclick="addComments(userComments)">Comment</button>
-    <p style="font-weight: bolder;margin: 1%;">All Comments</p>
-    <div id="addEventNames"></div>
-
-
-</div>
-
-
-
-
 </body>
-<script src="../scripts/common.js"></script>
-<script src="../scripts/post.js"></script>
+
+    <script src="../scripts/common.js"></script>
+    <script src="../scripts/post.js"></script>
 </html>

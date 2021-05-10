@@ -2,6 +2,8 @@
 label{
     font-weight: bold;
 }
+
+/* Css for input elements inside Modals*/
 .log-form>input{
     background-color: whitesmoke;
     margin-bottom:8px;
@@ -20,43 +22,56 @@ label{
     border-radius: .25rem;
     transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
 }
+
 #notAMember{
     text-align: center;
     font-weight: bold;
     margin-top: 10px;
     margin-bottom: 0;
 }
+
 .modal-body{
     margin-top: 0;
 }
+
+/*SignUp and SignIn buttons block*/
 .SignBtns{
     display: inline-block;
     position: absolute;
     right: 2%;
     margin: 1.5%;
 }
+
 header{
     display: inline-block;
 }
+
 #SignUp,#SignIn{
     background-color: blue;
     color: white;
 }
+
 .heading{
     display: inline-block;
 }
+
+/*Applied google fonts for Scribbler title*/
 #scribblerTitle{
     font-family: 'Montez', cursive;
     color: blue;
   }
+
 #subHeading{
     font-family: 'Ubuntu Mono', monospace;
 }
+
 #signUpModal,#signInModal{
     display: none;
     background-color: rgba(0,0,0,0.4);
 }
+
 #signUpbutton{margin-top: 20px;}
+
 .logging{
     max-width: 400px;
 }

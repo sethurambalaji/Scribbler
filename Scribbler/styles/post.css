@@ -72,12 +72,12 @@ body{
     margin: 1%;
     box-shadow: 3px 3px 3px 3px #ec959e;
 }
-#addEventNames{
+#addComments{
     background-color: lightgrey;
     width: 82%;
     justify-content: center;
 }
-#addEventNames > p{
+#addComments > p{
     height: 60px;
     background-color: white;
     margin: 1%;

@@ -27,29 +27,33 @@ function onEdit() {
   editButton = document.getElementById('edit-button');
   var headingBlock = document.getElementById('edit-heading');
   var postContent = document.getElementById('edit-contentText');
-  if(editButton.innerText==='Edit'){
+      var postContenttext = postContent.innerText;
       headingBlock.setAttribute('contenteditable','true');
       postContent.setAttribute('contenteditable','true');
       headingBlock.setAttribute('class','edit-heading editable');
       postContent.setAttribute('class','edit-contentText editable');
       editButton.innerHTML = 'Save<i class="fa fa-save" style="padding-left: 4px;"></i></button>';
-  }
-  else{
-      editButton.innerText = 'Edit' ;
-      headingBlock.removeAttribute('contenteditable');
-      postContent.removeAttribute('contenteditable');
-      headingBlock.setAttribute('class','edit-heading');
-      postContent.setAttribute('class','edit-contentText');
-      editButton.innerHTML = 'Edit<i class="fa fa-edit" style="padding-left: 4px;"></i></button>';
-  }
+      editButton.setAttribute('onclick','onsave()');
+}
+
+function onSave(){
+    var editButton;
+    editButton = document.getElementById('edit-button');
+    var headingBlock = document.getElementById('edit-heading');
+    var postContent = document.getElementById('edit-contentText');
+    headingBlock.removeAttribute('contenteditable');
+    postContent.removeAttribute('contenteditable');
+    headingBlock.setAttribute('class','edit-heading');
+    postContent.setAttribute('class','edit-contentText');
+    editButton.innerHTML = 'Edit<i class="fa fa-edit" style="padding-left: 4px;"></i></button>';
+    editButton.setAttribute('onclick','onEdit()');
 }
 
 
 var numberOfClicks=0;//tracking number of clicks on like button
 /*like function
- varies  for 0click , 1 click,2+ click
+ like content varies  for 0click , 1 click,2+ click
  */
-
 function postLiked(){
     document.getElementById("likeBlog").innerHTML = "<i class='fa fa-thumbs-up'></i> Liked!";
     numberOfClicks += 1;

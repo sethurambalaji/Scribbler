@@ -54,10 +54,33 @@ body{
     align-content: center;
 }
 #likeBlog{
-    background-color: red;
+    background-color: #dc3545;
     color: white;
 }
 .likeBlogButton{
     margin-top: 1%;
     margin-bottom: 1%;
+}
+#userComments{
+    width: 80%;
+    height: 100px;
+    margin: 1%;
+}
+#addList{
+    width: 150px;
+    height: 60px;
+    margin: 1%;
+    box-shadow: 3px 3px 3px 3px #ec959e;
+}
+#addEventNames{
+    background-color: lightgrey;
+    width: 82%;
+    justify-content: center;
+}
+#addEventNames > p{
+    height: 60px;
+    background-color: white;
+    margin: 1%;
+    padding-top: 1%;
+    padding-left: 1%;
 }

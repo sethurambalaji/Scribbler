@@ -42,11 +42,15 @@ function postLiked(){
 }
 
 function addComments(id){
-    var addEventName = id.value +'<br>';
-    var a = document.getElementById('userComments');
-    var innerHTMLContent = document.getElementById('addEventNames').innerHTML ;
-    document.getElementById('addEventNames').innerHTML = '<p>'+addEventName+'</p>'+innerHTMLContent;
-    a.value=a.defaultValue;
+    if(id.value!==""){
+        var addEventName = id.value +'<br>';
+        var a = document.getElementById('userComments');
+        var innerHTMLContent = document.getElementById('addEventNames').innerHTML ;
+        document.getElementById('addEventNames').innerHTML = '<p>'+addEventName+'</p>'+innerHTMLContent;
+        a.value=a.defaultValue;
+    }
+
+
 }
 
 

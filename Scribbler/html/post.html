@@ -16,7 +16,7 @@
         Scribbler
     </title>
 </head>
-<body>
+<body onload="dataLoading()">
 <header>
 <div class="heading">
     <h1 id="scribblerTitle">ScriBBler</h1>
@@ -100,9 +100,13 @@
 </div>
 
 <div class="post container">
-    <div class="heading-content" id="edit-heading" contenteditable="true"></div>
-    <div class="author">
-        <div class="author-name"></div>
+    <div class="heading-content"  contenteditable="true">
+        <h1 id="edit-heading"></h1>
+    </div>
+    <div class="authorBlock">
+        <div class="author-name">
+            <p id="author">
+        </div>
         <div>
             <button id="edit-button" type="button" class="btn btn-danger" onclick="onEdit()">Edit<i
                     class="fa fa-edit" style="padding-left: 5px;"></i></button>
@@ -110,7 +114,8 @@
     </div>
 
 
-    <div class="post-content" id="edit-contentText" contenteditable="true">
+    <div class="post-content"  contenteditable="true">
+        <p id="edit-contentText"></p>
     </div>
 
 
